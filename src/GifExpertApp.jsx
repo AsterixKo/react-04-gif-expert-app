@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
+import { GifGrid } from './components/GifGrid';
 
 export const GifExpertApp = () => {
   // console.log(import.meta.env.VITE_GIPHY_API_KEY);
@@ -18,13 +19,10 @@ export const GifExpertApp = () => {
     <>
       <h1>GifExpertApp</h1>
       <AddCategory onNewCategory={onAddCategory} />
-      {/* <AddCategory setCategories={setCategories}/> */}
-      {/* <button onClick={onAddCategory}>Agregar</button> */}
-      <ol>
-        {categories.map((category) => {
-          return <li key={category}>{category}</li>;
-        })}
-      </ol>
+
+      {categories.map((category) => (
+        <GifGrid key={category} category={category} />
+      ))}
     </>
   );
 };
