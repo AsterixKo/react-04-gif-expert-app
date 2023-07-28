@@ -9,12 +9,12 @@ export const GifExpertApp = () => {
     setCategories(['Valorant', ...categories]);
   };
 
-  console.log(categories);
+  // console.log(categories);
   return (
     <>
       <h1>GifExpertApp</h1>
-      <AddCategory />
-      <button onClick={onAddCategory}>Agregar</button>
+      <AddCategory setCategories={setCategories}/>
+      {/* <button onClick={onAddCategory}>Agregar</button> */}
       <ol>
         {categories.map((category) => {
           return <li key={category}>{category}</li>;
