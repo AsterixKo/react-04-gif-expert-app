@@ -9,10 +9,10 @@ export const getGifs = async (category) => {
   // console.log(data);
 
   const gifs = data.map((img) => ({
-    id: img,
+    id: img.id,
     title: img.title,
     url: img.images.downsized_medium.url,
   }));
-  //   console.log(gifs);
-  return getGifs;
+  console.log(gifs);
+  return gifs;
 };
