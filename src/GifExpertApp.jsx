@@ -1,11 +1,10 @@
-import { useState } from 'react';
-import { AddCategory } from './components/AddCategory';
-import { GifGrid } from './components/GifGrid';
+import { useState } from "react";
+import { AddCategory, GifGrid } from "./components/index";
 
 export const GifExpertApp = () => {
   // console.log(import.meta.env.VITE_GIPHY_API_KEY);
 
-  const [categories, setCategories] = useState(['One Punch', 'Dragon Ball']);
+  const [categories, setCategories] = useState(["One Punch", "Dragon Ball"]);
 
   const onAddCategory = (newCategory) => {
     if (categories.includes(newCategory)) return;
