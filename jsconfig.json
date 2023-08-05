@@ -2,10 +2,10 @@
   "typeAcquisition": {
     "include": ["jest"]
   },
-  "compilerOptions": {
-    "baseUrl": ".",
+  // "compilerOptions": {
+  //   "baseUrl": ".",
     // "paths": {
     //   "@/*": ["src/*"]
     // },
-  }
+  // }
 }

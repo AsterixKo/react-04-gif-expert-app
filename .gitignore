@@ -29,6 +29,7 @@ dist-ssr
 
 ### dotenv ###
 .env
+.env.test
 
 ### react ###
 .DS_*
