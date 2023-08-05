@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState } from "react";
+import PropTypes from "prop-types";
 
 export const AddCategory = ({ onNewCategory }) => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
 
   const onInputChange = (event) => {
     setInputValue(event.target.value);
@@ -12,7 +13,7 @@ export const AddCategory = ({ onNewCategory }) => {
     event.preventDefault(); //para que no envíe el formulario por defecto
     if (inputValue.trim().length <= 1) return;
     // setCategories((categories) => [inputValue, ...categories]);
-    setInputValue('');
+    setInputValue("");
     onNewCategory(inputValue.trim());
     // console.log(inputValue);
   };
@@ -28,4 +29,8 @@ export const AddCategory = ({ onNewCategory }) => {
       />
     </form>
   );
+};
+
+AddCategory.propTypes = {
+  onNewCategory: PropTypes.func.isRequired,
 };
